@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   def index
-    render json: BoulderTubing.new.conditions
+    # TODO: consider renaming these methods, it's kinda weird.
+    @report = Report.new(BoulderTubing.new.conditions).conditions
   end
 end

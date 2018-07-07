@@ -1,0 +1,18 @@
+<h2>Boulder Creek Report</h2>
+
+<p>
+  Here's your weather report.
+</p>
+
+<% if @report.good_day %>
+  <h4>Looks like it's going to be a great day for tubing.</h4>
+<% else %>
+  <h4>Sorry it looks like it's not a good day to go tubing. Maybe tomorrow?</h4>
+<% end %>
+
+<h4>Current Conditions:</h4>
+<p>
+  <strong>Temperature:</strong> <%= @report.temperature_f %><br/>
+  <strong>River Flow Rate:</strong> <%= @report.flow_rate_cfs %> CF/S<br/>
+  <strong>Weather:</strong> <%= @report.weather_condition %><br/>
+</p>
