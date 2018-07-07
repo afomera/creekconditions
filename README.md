@@ -1,24 +1,36 @@
-# README
+# Creek Conditions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Return the weather if it's a good day for tubing the Boulder Creek.
 
-Things you may want to cover:
+Deployed to Heroku: [https://immense-cliffs-20214.herokuapp.com/](https://immense-cliffs-20214.herokuapp.com/)
 
-* Ruby version
+## Setup
 
-* System dependencies
+* Install Ruby 2.5.1
 
-* Configuration
+* Run:
 
-* Database creation
+  ```bash
+  bundle install
+  rails db:create && rails db:migrate
+  rails server
+  ```
 
-* Database initialization
+## Running Tests
 
-* How to run the test suite
+You can run our small suite of tests with
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+rails test
+```
 
-* Deployment instructions
+Currently we don't have VCR or another library to help with API requests, but in the future, this can easily be added.
 
-* ...
+## Things to do with more time.
+
+* Better visuals, maybe a nice icon for each type of weather, i.e sunny icon for sunny weather.
+* VCR for API tests
+* Return a reason for why it's not a good day perhaps(i.e bad temp, bad flow rate, etc)
+* Better test cases for the API request
+* Better handling for if the API endpoint is slow/down
+* Consider naming the Report/BoulderTubing methods differently
